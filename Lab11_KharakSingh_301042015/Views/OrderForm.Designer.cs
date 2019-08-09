@@ -1,4 +1,4 @@
-﻿namespace Lab11_KharakSingh_301042015
+﻿namespace Lab11_KharakSingh_301042015.Views
 {
     partial class OrderForm
     {

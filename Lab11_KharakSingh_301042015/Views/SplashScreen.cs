@@ -1,4 +1,5 @@
 ﻿using System;
+using Lab11_KharakSingh_301042015.Controls;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,7 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Lab11_KharakSingh_301042015
+namespace Lab11_KharakSingh_301042015.Views
 {
     public partial class SplashScreen : Form
     {

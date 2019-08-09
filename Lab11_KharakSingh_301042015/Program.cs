@@ -1,4 +1,7 @@
 ﻿using System;
+using Lab11_KharakSingh_301042015.Views;
+using Lab11_KharakSingh_301042015.Controls;
+using Lab11_KharakSingh_301042015.Model;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -9,6 +12,7 @@ namespace Lab11_KharakSingh_301042015
     static class Program
     {
         public static Dictionary<FormName, Form> Forms;
+        public static Product product;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
@@ -24,6 +28,8 @@ namespace Lab11_KharakSingh_301042015
             Forms.Add(FormName.SELECT_FORM, new SelectForm());
             Forms.Add(FormName.PRODUCT_INFO_FORM, new ProductInfoForm());
             Forms.Add(FormName.ORDER_FORM, new OrderForm());
+
+            product = new Product();
 
             Application.Run(Forms[FormName.SPLASH_SCREEN]);
         }

@@ -1,4 +1,4 @@
-﻿namespace Lab11_KharakSingh_301042015
+﻿namespace Lab11_KharakSingh_301042015.Views
 {
     partial class StartForm
     {
@@ -84,9 +84,11 @@
             // StartFormPictureBox
             // 
             this.StartFormPictureBox.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.StartFormPictureBox.Location = new System.Drawing.Point(372, 142);
+            this.StartFormPictureBox.Image = global::Lab11_KharakSingh_301042015.Properties.Resources.Laptops;
+            this.StartFormPictureBox.Location = new System.Drawing.Point(352, 105);
             this.StartFormPictureBox.Name = "StartFormPictureBox";
-            this.StartFormPictureBox.Size = new System.Drawing.Size(379, 305);
+            this.StartFormPictureBox.Size = new System.Drawing.Size(418, 337);
+            this.StartFormPictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.StartFormPictureBox.TabIndex = 5;
             this.StartFormPictureBox.TabStop = false;
             // 
@@ -96,6 +98,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSalmon;
             this.ClientSize = new System.Drawing.Size(782, 553);
+            this.ControlBox = false;
             this.Controls.Add(this.StartFormPictureBox);
             this.Controls.Add(this.OpenSaveOrderButton);
             this.Controls.Add(this.ExitButton);
@@ -103,13 +106,14 @@
             this.Controls.Add(this.StartFormHeadingLabel);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.MaximizeBox = false;
             this.Name = "StartForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Start From";
             ((System.ComponentModel.ISupportInitialize)(this.StartFormPictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

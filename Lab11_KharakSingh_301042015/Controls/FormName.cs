@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Lab11_KharakSingh_301042015
+namespace Lab11_KharakSingh_301042015.Controls
 {
     public enum FormName
     {
