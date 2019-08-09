@@ -34,16 +34,16 @@ namespace Lab11_KharakSingh_301042015.Views
 
         private void NextButton_Click(object sender, EventArgs e)
         {
-            if (_hasSavedOrOpened)
-            {
+            //if (_hasSavedOrOpened)
+            //{
                 Program.Forms[FormName.ORDER_FORM].Show();
                 this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Please Save the product information or\n Open up a pre-saved product",
-                                    "Alert", MessageBoxButtons.OK);
-            }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Please Save the product information or\n Open up a pre-saved product",
+            //                        "Alert", MessageBoxButtons.OK);
+            //}
             
         }
 

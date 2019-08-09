@@ -292,6 +292,7 @@
             // 
             this.ProductOperatingSystemTextLabel.BackColor = System.Drawing.Color.White;
             this.ProductOperatingSystemTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ProductOperatingSystemTextLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProductOperatingSystemTextLabel.ForeColor = System.Drawing.Color.Black;
             this.ProductOperatingSystemTextLabel.Location = new System.Drawing.Point(415, 41);
             this.ProductOperatingSystemTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
