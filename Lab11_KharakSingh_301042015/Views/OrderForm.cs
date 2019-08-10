@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Diagnostics;
+using System.Drawing.Printing;
 
 namespace Lab11_KharakSingh_301042015.Views
 {
@@ -81,6 +82,15 @@ namespace Lab11_KharakSingh_301042015.Views
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Program.Forms[FormName.ABOUT_FORM].ShowDialog();
+        }
+
+        private void printToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductPrintForm.PrintAction = PrintAction.PrintToPreview;
+            ProductPrintForm.Form.StartPosition = FormStartPosition.CenterScreen;
+            //ProductPrintForm.centre
+            ProductPrintForm.Print();
+            
         }
     }
 }

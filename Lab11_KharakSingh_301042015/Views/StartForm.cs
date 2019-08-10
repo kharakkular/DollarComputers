@@ -28,5 +28,14 @@ namespace Lab11_KharakSingh_301042015.Views
         {
             Application.Exit();
         }
+
+        private void OpenSaveOrderButton_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Program.IsOpenSavedOrderPressed = true;
+            Program.Forms[FormName.PRODUCT_INFO_FORM].Show();
+
+
+        }
     }
 }

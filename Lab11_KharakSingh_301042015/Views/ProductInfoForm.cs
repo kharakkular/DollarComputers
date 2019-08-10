@@ -61,7 +61,12 @@ namespace Lab11_KharakSingh_301042015.Views
 
         private void ProductInfoForm_Activated(object sender, EventArgs e)
         {
-            _hasSavedOrOpened = false;
+            //_hasSavedOrOpened = false;
+            if (Program.IsOpenSavedOrderPressed)
+            {
+                openToolStripMenuItem_Click(sender, e);
+                Program.IsOpenSavedOrderPressed = false;
+            }
 
             ProductIDTextLabel.Text = Program.product.productID.ToString();
             ProductConditionTextLabel.Text = Program.product.condition;
@@ -158,6 +163,10 @@ namespace Lab11_KharakSingh_301042015.Views
                         Program.product.cost = decimal.Parse(reader.ReadLine());
                         Program.product.manufacturer = reader.ReadLine();
                         Program.product.model = reader.ReadLine();
+                        Program.product.RAM_type = reader.ReadLine();
+                        Program.product.RAM_size = reader.ReadLine();
+                        Program.product.displaytype = reader.ReadLine();
+                        Program.product.screensize = reader.ReadLine();
                         Program.product.resolution = reader.ReadLine();
                         Program.product.CPU_Class = reader.ReadLine();
                         Program.product.CPU_brand = reader.ReadLine();
@@ -210,5 +219,7 @@ namespace Lab11_KharakSingh_301042015.Views
                 }
             }
         }
+
+        
     }
 }

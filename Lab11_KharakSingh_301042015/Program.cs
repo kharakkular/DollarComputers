@@ -11,6 +11,7 @@ namespace Lab11_KharakSingh_301042015
 {
     static class Program
     {
+        public static bool IsOpenSavedOrderPressed;
         public static Dictionary<FormName, Form> Forms;
         public static Product product;
         /// <summary>
@@ -31,7 +32,7 @@ namespace Lab11_KharakSingh_301042015
             Forms.Add(FormName.ABOUT_FORM, new AboutForm());
 
             product = new Product();
-
+            IsOpenSavedOrderPressed = false;
             Application.Run(Forms[FormName.SPLASH_SCREEN]);
         }
     }
