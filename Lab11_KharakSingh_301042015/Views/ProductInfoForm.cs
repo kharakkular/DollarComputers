@@ -10,64 +10,63 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
+/// <summary>
+/// APP-Name: Dollar's Computer
+/// Author's Name: Kharak Singh Kular
+/// Creation Date: 15/8/2019
+/// Description: This form is for displaying the product information
+/// </summary>
 namespace Lab11_KharakSingh_301042015.Views
 {
     public partial class ProductInfoForm : Form
     {
-        //instance variable for checking if the user has saved the information or loaded previous one
-        private bool _hasSavedOrOpened;
-
         public ProductInfoForm()
         {
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Event handler for closing application
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
+        /// <summary>
+        /// Event handler for Next button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
-            //if (_hasSavedOrOpened)
-            //{
+            if (ProductIDTextLabel.Text != "0" &&( ProductIDTextLabel.Text != null || ProductManufacturerTextLabel.Text != null))
+            {
                 Program.Forms[FormName.ORDER_FORM].Show();
                 this.Hide();
-            //}
-            //else
-            //{
-            //    MessageBox.Show("Please Save the product information or\n Open up a pre-saved product",
-            //                        "Alert", MessageBoxButtons.OK);
-            //}
-            
+            }
         }
 
+        /// <summary>
+        /// Event Handler for Select another product button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectAnotherProductButton_Click(object sender, EventArgs e)
         {
             Program.Forms[FormName.SELECT_FORM].Show();
             this.Hide();
         }
 
-        private void selectAnotherProductToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Program.Forms[FormName.SELECT_FORM].Show();
-            this.Hide();
-        }
-
+        /// <summary>
+        /// Event handler for generating event every time the form shows
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void ProductInfoForm_Activated(object sender, EventArgs e)
         {
-            //_hasSavedOrOpened = false;
-            if (Program.IsOpenSavedOrderPressed)
-            {
-                openToolStripMenuItem_Click(sender, e);
-                Program.IsOpenSavedOrderPressed = false;
-            }
-
             ProductIDTextLabel.Text = Program.product.productID.ToString();
             ProductConditionTextLabel.Text = Program.product.condition;
             ProductCostTextLabel.Text = String.Format("{0:C}", Program.product.cost);
@@ -81,8 +80,22 @@ namespace Lab11_KharakSingh_301042015.Views
             ProductCpuSpeedTextLabel.Text = Program.product.CPU_speed;
             ProductHDDTextLabel.Text = Program.product.HDD_size;
             ProductCpuNumberTextLabel.Text = Program.product.CPU_number;
+
+            if (Program.IsOpenSavedOrderPressed)
+            {
+                openToolStripMenuItem_Click(sender, e);
+                Program.IsOpenSavedOrderPressed = false;
+                this.BringToFront();
+            }
+
+
         }
 
+        /// <summary>
+        /// Event handler for saving file
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void saveToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Configure the file dialog
@@ -138,11 +151,15 @@ namespace Lab11_KharakSingh_301042015.Views
                     //saved file feedback to user
                     MessageBox.Show("File Saved", "Saving File", MessageBoxButtons.OK, MessageBoxIcon.Asterisk);
                 }
-                //User has saved the file
-                _hasSavedOrOpened = true;
+                
             }
         }
 
+        /// <summary>
+        /// Event handler for opening file
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //Configure the file dialog
@@ -209,17 +226,13 @@ namespace Lab11_KharakSingh_301042015.Views
                     ProductCpuSpeedTextLabel.Text = Program.product.CPU_speed;
                     ProductHDDTextLabel.Text = Program.product.HDD_size;
                     ProductCpuNumberTextLabel.Text = Program.product.CPU_number;
-
-                    //user has opened previous file
-                    _hasSavedOrOpened = true;
                 }
                 catch (IOException exception)
                 {
                     MessageBox.Show("Error: " + exception.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
+            
         }
-
-        
     }
 }

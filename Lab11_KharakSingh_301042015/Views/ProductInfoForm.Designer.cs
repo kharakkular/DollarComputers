@@ -45,27 +45,27 @@
             this.ProductCostLabel = new System.Windows.Forms.Label();
             this.ProductCostTextLabel = new System.Windows.Forms.Label();
             this.ProductInfoGroupBox = new System.Windows.Forms.GroupBox();
-            this.ProductPlatformLabel = new System.Windows.Forms.Label();
-            this.ProductPlatformTextLabel = new System.Windows.Forms.Label();
-            this.ProductOperatingSystemLabel = new System.Windows.Forms.Label();
-            this.ProductOperatingSystemTextLabel = new System.Windows.Forms.Label();
-            this.ProductManufacturerLabel = new System.Windows.Forms.Label();
             this.ProductManufacturerTextLabel = new System.Windows.Forms.Label();
-            this.ProductModelLabel = new System.Windows.Forms.Label();
             this.ProductModelTextLabel = new System.Windows.Forms.Label();
+            this.ProductOperatingSystemTextLabel = new System.Windows.Forms.Label();
+            this.ProductPlatformTextLabel = new System.Windows.Forms.Label();
+            this.ProductManufacturerLabel = new System.Windows.Forms.Label();
+            this.ProductModelLabel = new System.Windows.Forms.Label();
+            this.ProductOperatingSystemLabel = new System.Windows.Forms.Label();
+            this.ProductPlatformLabel = new System.Windows.Forms.Label();
             this.TechSpecsGroupBox = new System.Windows.Forms.GroupBox();
+            this.ProductCpuNumberTextLabel = new System.Windows.Forms.Label();
             this.ProductCpuBrandTextLabel = new System.Windows.Forms.Label();
             this.ProductHDDTextLabel = new System.Windows.Forms.Label();
             this.ProductScreenSizeTextLabel = new System.Windows.Forms.Label();
+            this.ProductCpuSpeedTextLabel = new System.Windows.Forms.Label();
             this.ProductRamTextLabel = new System.Windows.Forms.Label();
+            this.ProductCpuNumberLabel = new System.Windows.Forms.Label();
             this.ProductCpuBrandLabel = new System.Windows.Forms.Label();
             this.ProductHDDLabel = new System.Windows.Forms.Label();
             this.ProductScreenSizeLabel = new System.Windows.Forms.Label();
-            this.ProductRamLabel = new System.Windows.Forms.Label();
             this.ProductCpuSpeedLabel = new System.Windows.Forms.Label();
-            this.ProductCpuSpeedTextLabel = new System.Windows.Forms.Label();
-            this.ProductCpuNumberLabel = new System.Windows.Forms.Label();
-            this.ProductCpuNumberTextLabel = new System.Windows.Forms.Label();
+            this.ProductRamLabel = new System.Windows.Forms.Label();
             this.ProductInfoOpenFileDialog = new System.Windows.Forms.OpenFileDialog();
             this.ProductInfoSaveFileDialog = new System.Windows.Forms.SaveFileDialog();
             this.ProductInfoMenuStrip.SuspendLayout();
@@ -77,7 +77,7 @@
             // 
             this.NextButton.BackColor = System.Drawing.Color.Silver;
             this.NextButton.Location = new System.Drawing.Point(659, 496);
-            this.NextButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.NextButton.Margin = new System.Windows.Forms.Padding(2);
             this.NextButton.Name = "NextButton";
             this.NextButton.Size = new System.Drawing.Size(93, 34);
             this.NextButton.TabIndex = 5;
@@ -89,7 +89,7 @@
             // 
             this.CancelButton.BackColor = System.Drawing.Color.Silver;
             this.CancelButton.Location = new System.Drawing.Point(513, 496);
-            this.CancelButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.CancelButton.Margin = new System.Windows.Forms.Padding(2);
             this.CancelButton.Name = "CancelButton";
             this.CancelButton.Size = new System.Drawing.Size(93, 34);
             this.CancelButton.TabIndex = 6;
@@ -101,7 +101,7 @@
             // 
             this.SelectAnotherProductButton.BackColor = System.Drawing.Color.Silver;
             this.SelectAnotherProductButton.Location = new System.Drawing.Point(28, 496);
-            this.SelectAnotherProductButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.SelectAnotherProductButton.Margin = new System.Windows.Forms.Padding(2);
             this.SelectAnotherProductButton.Name = "SelectAnotherProductButton";
             this.SelectAnotherProductButton.Size = new System.Drawing.Size(273, 34);
             this.SelectAnotherProductButton.TabIndex = 7;
@@ -151,7 +151,7 @@
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.CancelButton_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -166,7 +166,7 @@
             this.selectAnotherProductToolStripMenuItem.Name = "selectAnotherProductToolStripMenuItem";
             this.selectAnotherProductToolStripMenuItem.Size = new System.Drawing.Size(236, 26);
             this.selectAnotherProductToolStripMenuItem.Text = "Select Another Product";
-            this.selectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this.selectAnotherProductToolStripMenuItem_Click);
+            this.selectAnotherProductToolStripMenuItem.Click += new System.EventHandler(this.SelectAnotherProductButton_Click);
             // 
             // ProductIDLabel
             // 
@@ -239,6 +239,7 @@
             // 
             // ProductInfoGroupBox
             // 
+            this.ProductInfoGroupBox.BackColor = System.Drawing.Color.MediumTurquoise;
             this.ProductInfoGroupBox.Controls.Add(this.ProductManufacturerTextLabel);
             this.ProductInfoGroupBox.Controls.Add(this.ProductModelTextLabel);
             this.ProductInfoGroupBox.Controls.Add(this.ProductOperatingSystemTextLabel);
@@ -254,39 +255,29 @@
             this.ProductInfoGroupBox.TabStop = false;
             this.ProductInfoGroupBox.Text = "Product Info";
             // 
-            // ProductPlatformLabel
+            // ProductManufacturerTextLabel
             // 
-            this.ProductPlatformLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.ProductPlatformLabel.Location = new System.Drawing.Point(48, 40);
-            this.ProductPlatformLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ProductPlatformLabel.Name = "ProductPlatformLabel";
-            this.ProductPlatformLabel.Size = new System.Drawing.Size(96, 27);
-            this.ProductPlatformLabel.TabIndex = 10;
-            this.ProductPlatformLabel.Text = "Platform";
-            this.ProductPlatformLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ProductManufacturerTextLabel.BackColor = System.Drawing.Color.White;
+            this.ProductManufacturerTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ProductManufacturerTextLabel.ForeColor = System.Drawing.Color.Black;
+            this.ProductManufacturerTextLabel.Location = new System.Drawing.Point(160, 104);
+            this.ProductManufacturerTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ProductManufacturerTextLabel.Name = "ProductManufacturerTextLabel";
+            this.ProductManufacturerTextLabel.Size = new System.Drawing.Size(113, 28);
+            this.ProductManufacturerTextLabel.TabIndex = 12;
+            this.ProductManufacturerTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // ProductPlatformTextLabel
+            // ProductModelTextLabel
             // 
-            this.ProductPlatformTextLabel.BackColor = System.Drawing.Color.White;
-            this.ProductPlatformTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ProductPlatformTextLabel.ForeColor = System.Drawing.Color.Black;
-            this.ProductPlatformTextLabel.Location = new System.Drawing.Point(160, 39);
-            this.ProductPlatformTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ProductPlatformTextLabel.Name = "ProductPlatformTextLabel";
-            this.ProductPlatformTextLabel.Size = new System.Drawing.Size(113, 28);
-            this.ProductPlatformTextLabel.TabIndex = 12;
-            this.ProductPlatformTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ProductOperatingSystemLabel
-            // 
-            this.ProductOperatingSystemLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.ProductOperatingSystemLabel.Location = new System.Drawing.Point(304, 41);
-            this.ProductOperatingSystemLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ProductOperatingSystemLabel.Name = "ProductOperatingSystemLabel";
-            this.ProductOperatingSystemLabel.Size = new System.Drawing.Size(107, 27);
-            this.ProductOperatingSystemLabel.TabIndex = 10;
-            this.ProductOperatingSystemLabel.Text = "OS";
-            this.ProductOperatingSystemLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ProductModelTextLabel.BackColor = System.Drawing.Color.White;
+            this.ProductModelTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ProductModelTextLabel.ForeColor = System.Drawing.Color.Black;
+            this.ProductModelTextLabel.Location = new System.Drawing.Point(415, 104);
+            this.ProductModelTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ProductModelTextLabel.Name = "ProductModelTextLabel";
+            this.ProductModelTextLabel.Size = new System.Drawing.Size(261, 28);
+            this.ProductModelTextLabel.TabIndex = 12;
+            this.ProductModelTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ProductOperatingSystemTextLabel
             // 
@@ -301,6 +292,18 @@
             this.ProductOperatingSystemTextLabel.TabIndex = 12;
             this.ProductOperatingSystemTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // ProductPlatformTextLabel
+            // 
+            this.ProductPlatformTextLabel.BackColor = System.Drawing.Color.White;
+            this.ProductPlatformTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ProductPlatformTextLabel.ForeColor = System.Drawing.Color.Black;
+            this.ProductPlatformTextLabel.Location = new System.Drawing.Point(160, 39);
+            this.ProductPlatformTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ProductPlatformTextLabel.Name = "ProductPlatformTextLabel";
+            this.ProductPlatformTextLabel.Size = new System.Drawing.Size(113, 28);
+            this.ProductPlatformTextLabel.TabIndex = 12;
+            this.ProductPlatformTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // ProductManufacturerLabel
             // 
             this.ProductManufacturerLabel.ForeColor = System.Drawing.Color.Transparent;
@@ -311,18 +314,6 @@
             this.ProductManufacturerLabel.TabIndex = 10;
             this.ProductManufacturerLabel.Text = "Manufacturer";
             this.ProductManufacturerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // ProductManufacturerTextLabel
-            // 
-            this.ProductManufacturerTextLabel.BackColor = System.Drawing.Color.White;
-            this.ProductManufacturerTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ProductManufacturerTextLabel.ForeColor = System.Drawing.Color.Black;
-            this.ProductManufacturerTextLabel.Location = new System.Drawing.Point(160, 104);
-            this.ProductManufacturerTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ProductManufacturerTextLabel.Name = "ProductManufacturerTextLabel";
-            this.ProductManufacturerTextLabel.Size = new System.Drawing.Size(113, 28);
-            this.ProductManufacturerTextLabel.TabIndex = 12;
-            this.ProductManufacturerTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ProductModelLabel
             // 
@@ -335,20 +326,31 @@
             this.ProductModelLabel.Text = "Model";
             this.ProductModelLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ProductModelTextLabel
+            // ProductOperatingSystemLabel
             // 
-            this.ProductModelTextLabel.BackColor = System.Drawing.Color.White;
-            this.ProductModelTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ProductModelTextLabel.ForeColor = System.Drawing.Color.Black;
-            this.ProductModelTextLabel.Location = new System.Drawing.Point(415, 104);
-            this.ProductModelTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ProductModelTextLabel.Name = "ProductModelTextLabel";
-            this.ProductModelTextLabel.Size = new System.Drawing.Size(261, 28);
-            this.ProductModelTextLabel.TabIndex = 12;
-            this.ProductModelTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ProductOperatingSystemLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.ProductOperatingSystemLabel.Location = new System.Drawing.Point(304, 41);
+            this.ProductOperatingSystemLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ProductOperatingSystemLabel.Name = "ProductOperatingSystemLabel";
+            this.ProductOperatingSystemLabel.Size = new System.Drawing.Size(107, 27);
+            this.ProductOperatingSystemLabel.TabIndex = 10;
+            this.ProductOperatingSystemLabel.Text = "OS";
+            this.ProductOperatingSystemLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // ProductPlatformLabel
+            // 
+            this.ProductPlatformLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.ProductPlatformLabel.Location = new System.Drawing.Point(48, 40);
+            this.ProductPlatformLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ProductPlatformLabel.Name = "ProductPlatformLabel";
+            this.ProductPlatformLabel.Size = new System.Drawing.Size(96, 27);
+            this.ProductPlatformLabel.TabIndex = 10;
+            this.ProductPlatformLabel.Text = "Platform";
+            this.ProductPlatformLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // TechSpecsGroupBox
             // 
+            this.TechSpecsGroupBox.BackColor = System.Drawing.Color.MediumTurquoise;
             this.TechSpecsGroupBox.Controls.Add(this.ProductCpuNumberTextLabel);
             this.TechSpecsGroupBox.Controls.Add(this.ProductCpuBrandTextLabel);
             this.TechSpecsGroupBox.Controls.Add(this.ProductHDDTextLabel);
@@ -366,7 +368,19 @@
             this.TechSpecsGroupBox.Size = new System.Drawing.Size(729, 148);
             this.TechSpecsGroupBox.TabIndex = 14;
             this.TechSpecsGroupBox.TabStop = false;
-            this.TechSpecsGroupBox.Text = "Product Info";
+            this.TechSpecsGroupBox.Text = "Tech Specs";
+            // 
+            // ProductCpuNumberTextLabel
+            // 
+            this.ProductCpuNumberTextLabel.BackColor = System.Drawing.Color.White;
+            this.ProductCpuNumberTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ProductCpuNumberTextLabel.ForeColor = System.Drawing.Color.Black;
+            this.ProductCpuNumberTextLabel.Location = new System.Drawing.Point(611, 100);
+            this.ProductCpuNumberTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ProductCpuNumberTextLabel.Name = "ProductCpuNumberTextLabel";
+            this.ProductCpuNumberTextLabel.Size = new System.Drawing.Size(113, 28);
+            this.ProductCpuNumberTextLabel.TabIndex = 12;
+            this.ProductCpuNumberTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // ProductCpuBrandTextLabel
             // 
@@ -404,6 +418,18 @@
             this.ProductScreenSizeTextLabel.TabIndex = 12;
             this.ProductScreenSizeTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // ProductCpuSpeedTextLabel
+            // 
+            this.ProductCpuSpeedTextLabel.BackColor = System.Drawing.Color.White;
+            this.ProductCpuSpeedTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ProductCpuSpeedTextLabel.ForeColor = System.Drawing.Color.Black;
+            this.ProductCpuSpeedTextLabel.Location = new System.Drawing.Point(148, 102);
+            this.ProductCpuSpeedTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ProductCpuSpeedTextLabel.Name = "ProductCpuSpeedTextLabel";
+            this.ProductCpuSpeedTextLabel.Size = new System.Drawing.Size(113, 28);
+            this.ProductCpuSpeedTextLabel.TabIndex = 12;
+            this.ProductCpuSpeedTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // ProductRamTextLabel
             // 
             this.ProductRamTextLabel.BackColor = System.Drawing.Color.White;
@@ -415,6 +441,17 @@
             this.ProductRamTextLabel.Size = new System.Drawing.Size(101, 28);
             this.ProductRamTextLabel.TabIndex = 12;
             this.ProductRamTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ProductCpuNumberLabel
+            // 
+            this.ProductCpuNumberLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.ProductCpuNumberLabel.Location = new System.Drawing.Point(463, 101);
+            this.ProductCpuNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ProductCpuNumberLabel.Name = "ProductCpuNumberLabel";
+            this.ProductCpuNumberLabel.Size = new System.Drawing.Size(130, 27);
+            this.ProductCpuNumberLabel.TabIndex = 10;
+            this.ProductCpuNumberLabel.Text = "CPU Number";
+            this.ProductCpuNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ProductCpuBrandLabel
             // 
@@ -449,17 +486,6 @@
             this.ProductScreenSizeLabel.Text = "LCD Size";
             this.ProductScreenSizeLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ProductRamLabel
-            // 
-            this.ProductRamLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.ProductRamLabel.Location = new System.Drawing.Point(258, 36);
-            this.ProductRamLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ProductRamLabel.Name = "ProductRamLabel";
-            this.ProductRamLabel.Size = new System.Drawing.Size(96, 27);
-            this.ProductRamLabel.TabIndex = 10;
-            this.ProductRamLabel.Text = "RAM";
-            this.ProductRamLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
             // ProductCpuSpeedLabel
             // 
             this.ProductCpuSpeedLabel.ForeColor = System.Drawing.Color.Transparent;
@@ -471,40 +497,16 @@
             this.ProductCpuSpeedLabel.Text = "CPU Speed";
             this.ProductCpuSpeedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // ProductCpuSpeedTextLabel
+            // ProductRamLabel
             // 
-            this.ProductCpuSpeedTextLabel.BackColor = System.Drawing.Color.White;
-            this.ProductCpuSpeedTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ProductCpuSpeedTextLabel.ForeColor = System.Drawing.Color.Black;
-            this.ProductCpuSpeedTextLabel.Location = new System.Drawing.Point(148, 102);
-            this.ProductCpuSpeedTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ProductCpuSpeedTextLabel.Name = "ProductCpuSpeedTextLabel";
-            this.ProductCpuSpeedTextLabel.Size = new System.Drawing.Size(113, 28);
-            this.ProductCpuSpeedTextLabel.TabIndex = 12;
-            this.ProductCpuSpeedTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ProductCpuNumberLabel
-            // 
-            this.ProductCpuNumberLabel.ForeColor = System.Drawing.Color.Transparent;
-            this.ProductCpuNumberLabel.Location = new System.Drawing.Point(463, 101);
-            this.ProductCpuNumberLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ProductCpuNumberLabel.Name = "ProductCpuNumberLabel";
-            this.ProductCpuNumberLabel.Size = new System.Drawing.Size(130, 27);
-            this.ProductCpuNumberLabel.TabIndex = 10;
-            this.ProductCpuNumberLabel.Text = "CPU Number";
-            this.ProductCpuNumberLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // ProductCpuNumberTextLabel
-            // 
-            this.ProductCpuNumberTextLabel.BackColor = System.Drawing.Color.White;
-            this.ProductCpuNumberTextLabel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.ProductCpuNumberTextLabel.ForeColor = System.Drawing.Color.Black;
-            this.ProductCpuNumberTextLabel.Location = new System.Drawing.Point(611, 100);
-            this.ProductCpuNumberTextLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.ProductCpuNumberTextLabel.Name = "ProductCpuNumberTextLabel";
-            this.ProductCpuNumberTextLabel.Size = new System.Drawing.Size(113, 28);
-            this.ProductCpuNumberTextLabel.TabIndex = 12;
-            this.ProductCpuNumberTextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ProductRamLabel.ForeColor = System.Drawing.Color.Transparent;
+            this.ProductRamLabel.Location = new System.Drawing.Point(258, 36);
+            this.ProductRamLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.ProductRamLabel.Name = "ProductRamLabel";
+            this.ProductRamLabel.Size = new System.Drawing.Size(96, 27);
+            this.ProductRamLabel.TabIndex = 10;
+            this.ProductRamLabel.Text = "RAM";
+            this.ProductRamLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // ProductInfoOpenFileDialog
             // 

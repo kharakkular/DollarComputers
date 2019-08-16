@@ -7,10 +7,17 @@ using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// APP-Name: Dollar's Computer
+/// Author's Name: Kharak Singh Kular
+/// Creation Date: 15/8/2019
+/// Description: This form is for displaying the App's information in About box
+/// </summary>
 namespace Lab11_KharakSingh_301042015.Views
 {
     partial class AboutForm : Form
     {
+        //constant fields for displaying information in About form
         public const string PROGRAMMER_NAME = "Kharak Singh Kular";
         public const string WEBSITE = "www.dollarcomputer.ca";
         public const string CONTACT = "123-345-6789";

@@ -67,6 +67,7 @@
             this.SelectComputerLabel = new System.Windows.Forms.Label();
             this.NextButton = new System.Windows.Forms.Button();
             this.CancelButton = new System.Windows.Forms.Button();
+            this.RefineSearchLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.SelectProductDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.productBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -74,7 +75,7 @@
             // SelectFormDescriptionLabel
             // 
             this.SelectFormDescriptionLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.SelectFormDescriptionLabel.Location = new System.Drawing.Point(3, 30);
+            this.SelectFormDescriptionLabel.Location = new System.Drawing.Point(11, 83);
             this.SelectFormDescriptionLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SelectFormDescriptionLabel.Name = "SelectFormDescriptionLabel";
             this.SelectFormDescriptionLabel.Size = new System.Drawing.Size(230, 32);
@@ -124,7 +125,7 @@
             this.powerDataGridViewTextBoxColumn,
             this.webcamDataGridViewTextBoxColumn});
             this.SelectProductDataGridView.DataSource = this.productBindingSource;
-            this.SelectProductDataGridView.Location = new System.Drawing.Point(8, 64);
+            this.SelectProductDataGridView.Location = new System.Drawing.Point(8, 117);
             this.SelectProductDataGridView.Margin = new System.Windows.Forms.Padding(2);
             this.SelectProductDataGridView.MultiSelect = false;
             this.SelectProductDataGridView.Name = "SelectProductDataGridView";
@@ -422,7 +423,7 @@
             // 
             this.SelectedComputerInformationLabel.BackColor = System.Drawing.Color.White;
             this.SelectedComputerInformationLabel.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.SelectedComputerInformationLabel.Location = new System.Drawing.Point(214, 410);
+            this.SelectedComputerInformationLabel.Location = new System.Drawing.Point(214, 443);
             this.SelectedComputerInformationLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SelectedComputerInformationLabel.Name = "SelectedComputerInformationLabel";
             this.SelectedComputerInformationLabel.Size = new System.Drawing.Size(557, 37);
@@ -432,7 +433,7 @@
             // SelectComputerLabel
             // 
             this.SelectComputerLabel.ForeColor = System.Drawing.Color.Maroon;
-            this.SelectComputerLabel.Location = new System.Drawing.Point(11, 410);
+            this.SelectComputerLabel.Location = new System.Drawing.Point(11, 437);
             this.SelectComputerLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.SelectComputerLabel.Name = "SelectComputerLabel";
             this.SelectComputerLabel.Size = new System.Drawing.Size(189, 48);
@@ -464,6 +465,17 @@
             this.CancelButton.UseVisualStyleBackColor = false;
             this.CancelButton.Click += new System.EventHandler(this.CancelButton_Click);
             // 
+            // RefineSearchLabel
+            // 
+            this.RefineSearchLabel.ForeColor = System.Drawing.Color.Maroon;
+            this.RefineSearchLabel.Location = new System.Drawing.Point(17, 9);
+            this.RefineSearchLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.RefineSearchLabel.Name = "RefineSearchLabel";
+            this.RefineSearchLabel.Size = new System.Drawing.Size(183, 48);
+            this.RefineSearchLabel.TabIndex = 3;
+            this.RefineSearchLabel.Text = "Refine Your Search";
+            this.RefineSearchLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // SelectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -473,6 +485,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.CancelButton);
             this.Controls.Add(this.NextButton);
+            this.Controls.Add(this.RefineSearchLabel);
             this.Controls.Add(this.SelectComputerLabel);
             this.Controls.Add(this.SelectedComputerInformationLabel);
             this.Controls.Add(this.SelectProductDataGridView);
@@ -530,5 +543,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn mousttypeDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn powerDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn webcamDataGridViewTextBoxColumn;
+        private System.Windows.Forms.Label RefineSearchLabel;
     }
 }

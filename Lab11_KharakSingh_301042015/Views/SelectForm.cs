@@ -11,6 +11,12 @@ using System.Windows.Forms;
 using Lab11_KharakSingh_301042015.Model;
 using System.Data.Entity;
 
+/// <summary>
+/// APP-Name: Dollar's Computer
+/// Author's Name: Kharak Singh Kular
+/// Creation Date: 15/8/2019
+/// Description: This form is for displaying all products for selecting
+/// </summary>
 namespace Lab11_KharakSingh_301042015.Views
 {
     public partial class SelectForm : Form
@@ -20,6 +26,11 @@ namespace Lab11_KharakSingh_301042015.Views
             InitializeComponent();
         }
 
+        /// <summary>
+        /// Event handler for next button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void NextButton_Click(object sender, EventArgs e)
         {
             if (SelectProductDataGridView.Rows[SelectProductDataGridView.CurrentCell.RowIndex].Selected)
@@ -35,11 +46,21 @@ namespace Lab11_KharakSingh_301042015.Views
             
         }
 
+        /// <summary>
+        /// Event handler for cancel button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void CancelButton_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// Event handler for loading form
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectForm_Load(object sender, EventArgs e)
         {
             SelectedComputerInformationLabel.Text = null;
@@ -54,9 +75,14 @@ namespace Lab11_KharakSingh_301042015.Views
             SelectedComputerInformationLabel.Text = string.Empty;
         }
 
+        /// <summary>
+        /// Event handler for selection of item every time it is selected
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void SelectProductDataGridView_SelectionChanged(object sender, EventArgs e)
         {
-            if (SelectProductDataGridView.SelectedRows.Count != 0)
+            if (SelectProductDataGridView.SelectedRows.Count == 1)
             {
                 NextButton.BackColor = Color.Silver;
                 NextButton.ForeColor = Color.Black;

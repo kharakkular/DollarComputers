@@ -7,6 +7,12 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+/// <summary>
+/// APP-Name: Dollar's Computer
+/// Author's Name: Kharak Singh Kular
+/// Creation Date: 15/8/2019
+/// Description: This is the main class of the program from which the application runs
+/// </summary>
 namespace Lab11_KharakSingh_301042015
 {
     static class Program
@@ -30,7 +36,7 @@ namespace Lab11_KharakSingh_301042015
             Forms.Add(FormName.PRODUCT_INFO_FORM, new ProductInfoForm());
             Forms.Add(FormName.ORDER_FORM, new OrderForm());
             Forms.Add(FormName.ABOUT_FORM, new AboutForm());
-
+            
             product = new Product();
             IsOpenSavedOrderPressed = false;
             Application.Run(Forms[FormName.SPLASH_SCREEN]);
