@@ -38,7 +38,8 @@ namespace Lab11_KharakSingh_301042015.Views
         {
             MessageBox.Show("Thanks for shopping. \n\nYour order will be prodessed in 7-10 business days.",
                 "Your order", MessageBoxButtons.OK);
-            Application.Exit();
+            Program.Forms[FormName.START_FORM].Show();
+            this.Hide();
         }
 
         /// <summary>
